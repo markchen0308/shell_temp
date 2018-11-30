@@ -26,6 +26,13 @@ source ~/.bashrc
 mkvirtualenv cv3 -p python3
 workon cv3
 
+cd ~/opencv/opencv3.3/opencv-3.3.0
+mkdir build
 
-
-
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D INSTALL_PYTHON_EXAMPLES=ON \
+      -D INSTALL_C_EXAMPLES=OFF \
+      -D OPENCV_EXTRA_MODULES_PATH=~/opencv/opencv3.3/opencv_contrib-3.3.0/modules \
+      -D PYTHON_EXECUTABLE=~/.virtualenvs/cv3/bin/python \
+      -D BUILD_EXAMPLES=ON ..
