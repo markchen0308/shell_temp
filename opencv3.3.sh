@@ -1,7 +1,7 @@
 sudo apt-get autoremove
 sudo apt-get install -y build-essential
 sudo apt-get install -y cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-sudo apt-get install -y python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+sudo apt-get install -y python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng16-dev libtiff-dev libjasper-dev libdc1394-22-dev
 sudo apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 sudo apt-get install -y libxvidcore-dev libx264-dev
 sudo apt-get install -y libgtk-3-dev
@@ -36,3 +36,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D OPENCV_EXTRA_MODULES_PATH=~/opencv/opencv3.3/opencv_contrib-3.3.0/modules \
       -D PYTHON_EXECUTABLE=~/.virtualenvs/cv3/bin/python \
       -D BUILD_EXAMPLES=ON ..
+sudo make -j6
+sudo make install
+sudo ldconfig
+ sudo apt-get install libpng12-dev
