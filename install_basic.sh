@@ -66,7 +66,8 @@ if [ "$installJava" = "y" ]
     sudo apt-get install -y default-jre
     sudo apt-get install -y default-jdk
     #get path of java
-    PATHJAVA=`update-alternatives --config java | awk -F':' '{print $2}' | sed 's/java//g' |sed 's/ //g'` 
+    PATHJAVA=`update-alternatives --config java | awk -F':' '{print $2}' | sed 's/bin\/java/bin/g' |sed 's/ //g'` 
+    echo "PATHJAVA=$PATHJAVA"
     #save to environment variable JAVA_HOME 
     sudo sh -c  "echo 'JAVA_HOME=\"$PATHJAVA\"' >> /etc/environment"
     source /etc/environment
