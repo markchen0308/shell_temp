@@ -11,9 +11,12 @@ sudo apt-get install -y libfaac-dev libmp3lame-dev libtheora-dev
 sudo apt-get install -y libvorbis-dev libopencore-amrnb-dev libopencore-amrwb-dev
 sudo apt-get install -y x264 v4l-utils
 sudo apt-get install -y python2.7-dev python3.5-dev 
+sudo apt install -y cmake
+apt-get install zlibc zlib1g zlib1g-dev
+sudo ln -s /lib/arm-linux-gnueabihf/libz.so.1 /usr/lib/arm-linux-gnueabihf/libz.so.1
 
 cd ~/opencv/opencv3.4_ubuntu16/opencv
-rm -rf build
+sudo rm -rf build
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
@@ -32,4 +35,4 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D BUILD_EXAMPLES=ON ..
 
 sudo make -j6
-sudo make install
+#sudo make install

@@ -77,6 +77,7 @@ if [ "$installMatplotlib" = "y" ]
     #sudo rm /usr/lib/arm-linux-gnueabihf/libc.so
     #sudo ln -s /lib/arm-linux-gnueabihf/libc.so.6 /usr/lib/arm-linux-gnueabihf/libc.so
 
+
     sudo ln -s /lib/arm-linux-gnueabihf/libc.so.6 /lib/arm-linux-gnueabihf/libc.so
 fi
 
