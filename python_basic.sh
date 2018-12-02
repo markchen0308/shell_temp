@@ -65,7 +65,7 @@ fi
 if [ "$installMatplotlib" = "y" ]
     then
     echo "Start to installing Matplotlib"
-    sudo apt-get install tcl-dev tk-dev python-tk python3-tk
+    sudo apt-get install -y  python3-tk tcl-dev tcl8.6-dev tk-dev tk8.6-dev python-tk
     pip3 install pillow --user
     pip3 install matplotlib --user
     #cd ~
@@ -76,7 +76,7 @@ if [ "$installMatplotlib" = "y" ]
     #sudo rm /usr/lib/arm-linux-gnueabihf/libc.so
     #sudo ln -s /lib/arm-linux-gnueabihf/libc.so.6 /usr/lib/arm-linux-gnueabihf/libc.so
 
-    
+    sudo ln -s /lib/arm-linux-gnueabihf/libc.so.6 /lib/arm-linux-gnueabihf/libc.so
 fi
 
 
@@ -134,7 +134,7 @@ if [ "$installJupyter" = "y" ]
     then
     echo "Start to installing jupyter"
     pip3 install jupyter --user
-    sudo sh -c  "echo 'export PATH="/home/pi/.local/bin:\$PATH"' >> ~/.bashrc"
+   # sudo sh -c  "echo 'export PATH="/home/pi/.local/bin:\$PATH"' >> ~/.bashrc"
 fi
 
 
