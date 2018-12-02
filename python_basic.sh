@@ -6,8 +6,9 @@ installScipy="y"
 installMatplotlib="y"
 installScikitImage="y"
 installScikitLearn="y"
-installIpython="y"
+
 installPandas="y"
+installVirtualEvn="y"
 
 cd ~
 cwd="python_module"
@@ -113,11 +114,6 @@ if [ "$installScikitLearn" = "y" ]
     python3 setup.py install --user
 fi
 
-if [ "$installIpython" = "y" ]
-    then
-    echo "Start to installing ipython"
-    python3 install Ipython --user
-fi
 
 if [ "$installPandas" = "y" ]
     then
@@ -127,7 +123,7 @@ if [ "$installPandas" = "y" ]
     #git clone https://github.com/pandas-dev/pandas.git
     #cd pandas
     #python3 setup.py install --user
-    python3 install pandas --user
+    pip3 install pandas --user
 fi
 
 if [ "$installJupyter" = "y" ]
@@ -138,7 +134,18 @@ if [ "$installJupyter" = "y" ]
 fi
 
 
+if [ "$installVirtualEvn" = "y" ]
+    then
+    echo "Start to install virtualenv"
+    sudo pip3 install virtualenv virtualenvwrapper
+    sudo sh -c  "echo 'export WORKON_HOME=$HOME/.virtualenvs' >> ~/.bashrc"
+    sudo sh -c  "echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc"
+    source ~/.bashrc
+    mkvirtualenv --system-site-packages  cv3 -p python3 
+    deactivate
 
+   # sudo sh -c  "echo 'export PATH="/home/pi/.local/bin:\$PATH"' >> ~/.bashrc"
+fi
 
 
 
