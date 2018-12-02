@@ -1,0 +1,34 @@
+
+pip3 install --upgrade pip
+
+
+pip3文件在usr/bin目錄下，cd進去，進行以下修改
+sudo nano /usr/bin/pip3
+把下面的三行
+
+from pip import main
+if __name__ == '__main__':
+    sys.exit(main())
+換成下面的三行
+
+from pip import __main__
+if __name__ == '__main__':
+    sys.exit(__main__._main())
+然後問題就解決了。
+
+-------------------------------------------------- -----------------
+
+如果在pip時候遇到權限問題，如下錯誤，此時可以直接加sudo進行解決，sudo pip install ....
+
+-------------------------------------------------- -----------------
+
+如果遇到超時問題或者下載很慢的問題：可以使用豆瓣資源，使用以下命令即可：
+
+pip install pyinstaller -i http://pypi.douban.com/simple --trusted-host pypi.douban.com  
+（將你要安裝的包替換就可以）
+
+--------------------- 
+作者：accumulate_zhang 
+来源：CSDN 
+原文：https://blog.csdn.net/accumulate_zhang/article/details/80269313 
+版权声明：本文为博主原创文章，转载请附上博文链接！

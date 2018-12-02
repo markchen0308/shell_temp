@@ -38,11 +38,12 @@ fi
 if [ "$installNumpy" = "y" ]
     then
     echo "Start to installing Numpy"
-    cd ~
-    cd $cwd
-    git clone https://github.com/numpy/numpy.git
-    cd numpy
-    python3 setup.py install --user
+   # cd ~
+    #cd $cwd
+    #git clone https://github.com/numpy/numpy.git
+    #cd numpy
+    #python3 setup.py install --user
+     pip3 install numpy --user
 fi
 
 
@@ -57,7 +58,7 @@ if [ "$installScipy" = "y" ]
     #git clone https://github.com/scipy/scipy.git
     #cd scipy
     #python3 setup.py install --user
-    pip3 install jupyter --user
+    pip3 install scipy --user
 fi
 
 
