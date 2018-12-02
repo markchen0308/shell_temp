@@ -137,7 +137,7 @@ fi
 if [ "$installVirtualEvn" = "y" ]
     then
     echo "Start to install virtualenv"
-    sudo pip3 install virtualenv virtualenvwrapper
+    sudo pip install virtualenv virtualenvwrapper
     sudo sh -c  "echo 'export WORKON_HOME=$HOME/.virtualenvs' >> ~/.bashrc"
     sudo sh -c  "echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc"
     source ~/.bashrc
