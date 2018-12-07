@@ -16,5 +16,3 @@ sudo gedit /etc/ld.so.conf.d/glibc-2.24.conf
 /opt/glibc-2.24/lib
 
 sudo ldconfig
-
-ln -s /opt/glibc
