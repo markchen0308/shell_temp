@@ -11,3 +11,10 @@ cd build
 ../configure --prefix=/opt/glibc-2.24
 make -j4 
 sudo make install  
+sudo gedit /etc/ld.so.conf.d/glibc-2.24.conf
+#fill 
+/opt/glibc-2.24/lib
+
+sudo ldconfig
+
+ln -s /opt/glibc
