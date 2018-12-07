@@ -3,3 +3,11 @@
 /lib/arm-linux-gnueabihf/libc.so.6
 /usr/lib/arm-linux-gnueabihf/libc.so.6
 strings /lib/arm-linux-gnueabihf/libc.so.6 | grep GLIBC
+
+wget http://ftp.gnu.org/gnu/libc/glibc-2.24.tar.gz
+cd glibc-2.24
+mkdir build
+cd build
+../configure --prefix=/opt/glibc-2.24
+make -j4 
+sudo make install  
