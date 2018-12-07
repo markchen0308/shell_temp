@@ -10,6 +10,7 @@ sudo apt-get install -y libatlas-base-dev gfortran
 sudo apt-get install -y libfaac-dev libmp3lame-dev libtheora-dev
 sudo apt-get install -y libvorbis-dev libopencore-amrnb-dev libopencore-amrwb-dev
 sudo apt-get install -y x264 v4l-utils
+ sudo apt-get install -y libatlas-base-dev 
 sudo apt-get install -y python2.7-dev python3.5-dev 
 sudo apt install -y cmake
 apt-get install zlibc zlib1g zlib1g-dev
@@ -39,10 +40,11 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 
 sudo make -j6
 sudo make install
-ln -s /usr/local/python/cv2/python-3.5/cv2.cpython-35m-arm-linux-gnueabihf.so /home/pi/.virtualenvs/cv3/lib/python3.5/site-packages/cv2.so
-ln -s /usr/local/python/cv2/python-3.5/cv2.cpython-35m-arm-linux-gnueabihf.so /home/pi/.local/lib/python3.5/site-packages/cv2.so
+ln -s /usr/local/lib/python3.5/cv2.cpython-35m-arm-linux-gnueabihf.so /home/pi/.local/lib/python3.5/site-packages/cv2.so
 
 workon cv3
 python3
 import cv2
 cv2.__version__
+
+sudo make unistall all

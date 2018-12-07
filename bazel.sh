@@ -68,7 +68,7 @@ bazel build -c opt --copt="-mfpu=neon-vfpv4" --copt="-funsafe-math-optimizations
 #package
 bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
 #install
-sudo pip install /tmp/tensorflow_pkg/tensorflow-1.4.1-cp35-cp35m-linux_armv7l.whl
+sudo pip3 install /tmp/tensorflow_pkg/tensorflow-1.4.1-cp35-cp35m-linux_armv7l.whl
 #disable swap
 sudo swapoff /dev/sdb1
 #delete uuid

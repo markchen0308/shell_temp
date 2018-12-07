@@ -75,3 +75,34 @@ sudo gedit /etc/ld.so.conf.d/opencv.conf
 
 sudo ldconfig
  sudo apt-get install libpng12-dev
+
+
+
+
+
+
+wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.1.zip
+
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.1.zip
+
+unzip opencv.zip
+
+unzip opencv_contrib.zip
+
+
+cd opencv-3.4.1
+mkdir build
+cd build
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D INSTALL_C_EXAMPLES=ON \
+      -D INSTALL_PYTHON_EXAMPLES=ON \
+      -D WITH_TBB=ON \
+      -D WITH_V4L=ON \
+      -D WITH_QT=ON \
+      -D WITH_OPENCL=ON \
+      -D OPENCV_EXTRA_MODULES_PATH=~/Downloads/opencv3.4.1/opencv_contrib-3.4.1/modules \
+      -D PYTHON_LIBRARY=/usr/lib/arm-linux-gnueabihf/libpython3.5m.so.1 \
+      -D PYTHON_DEFAULT_EXECUTABLE=/usr/bin/python3.5m \
+      -D PYTHON_INCLUDE_DIRS=/usr/include/python3.5m \
+      -D BUILD_EXAMPLES=ON ..
