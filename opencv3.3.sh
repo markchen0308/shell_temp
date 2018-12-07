@@ -106,3 +106,6 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D PYTHON_DEFAULT_EXECUTABLE=/usr/bin/python3.5m \
       -D PYTHON_INCLUDE_DIRS=/usr/include/python3.5m \
       -D BUILD_EXAMPLES=ON ..
+
+sudo make install
+ln -s /usr/local/python/cv2/python-3.5/cv2.cpython-35m-arm-linux-gnueabihf.so /home/pi/.local/lib/python3.5/site-packages/cv2.so
