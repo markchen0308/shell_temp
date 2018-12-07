@@ -1,10 +1,10 @@
  
-
+ sudo nano /etc/environment
+ remove JAVA_HOME
 sudo update-alternatives --display java
  sudo update-alternatives --remove "java" "/usr/lib/jvm/java-8-openjdk-armhf/jre/bin/java"
-sudo update-alternatives --remove "javac" "/usr/lib/jvm/java-8-openjdk-armhf/jre/bin/java"
-sudo update-alternatives --remove "javaws" "/usr/lib/jvm/java-8-openjdk-armhf/jre/bin/java"
-sudo update-alternatives --display java
+sudo update-alternatives --remove "javac" "/usr/lib/jvm/java-8-openjdk-armhf/bin/javac"
+sudo update-alternatives --display java 
  java -version
 cd /usr/lib/jvm
 sudo rm -rf /usr/lib/jvm/java-8-openjdk-armhf/
@@ -27,6 +27,7 @@ run "${JAVAC}" -classpath "${classpath}" -sourcepath "${sourcepath}" \
 
  ./compile.sh
 
+sudo cp output/bazel /usr/local/bin/bazel
 
 
 
