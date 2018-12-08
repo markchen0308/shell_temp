@@ -1,20 +1,5 @@
  
- sudo nano /etc/environment
- remove JAVA_HOME
-sudo update-alternatives --display java
- sudo update-alternatives --remove "java" "/usr/lib/jvm/java-8-openjdk-armhf/jre/bin/java"
-sudo update-alternatives --remove "javac" "/usr/lib/jvm/java-8-openjdk-armhf/bin/javac"
-sudo update-alternatives --display java 
- java -version
-cd /usr/lib/jvm
-sudo rm -rf /usr/lib/jvm/java-8-openjdk-armhf/
-
-
-sudo mkdir  /usr/lib/jvm/
-sudo cp -r  jdk1.8.0_151/ /usr/lib/jvm/jdk1.8.0_151/
-sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_151/bin/java" 1
-sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_151/bin/javac" 1 
-
+ 
 
 wget https://github.com/bazelbuild/bazel/releases/download/0.9.0/bazel-0.9.0-dist.zip -O bazel.zip
 unzip -d bazel bazel.zip
