@@ -15,8 +15,7 @@ sudo apt-get install -y python2.7-dev python3.5-dev
 sudo apt install -y cmake
 apt-get install zlibc zlib1g zlib1g-dev
 #sudo ln -s /lib/arm-linux-gnueabihf/libz.so.1 /usr/lib/arm-linux-gnueabihf/libz.so.1
- sudo ln -s /lib/arm-linux-gnueabihf/libz.so.1 /usr/lib/libz.so
-
+ sudo ln -s /lib/arm-linux-gnueabihf/libz.so.1 /usr/local/lib/libz.so.1
 
 
 cd ~/opencv/opencv3.4_ubuntu16/opencv
