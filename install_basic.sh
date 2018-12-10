@@ -75,6 +75,8 @@ if [ "$installJava" = "y" ]
     sudo nano /etc/environment
  remove JAVA_HOME
  
+
+ https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html
 sudo update-alternatives --display java
  sudo update-alternatives --remove "java" "/usr/lib/jvm/java-8-openjdk-armhf/jre/bin/java"
 sudo update-alternatives --remove "javac" "/usr/lib/jvm/java-8-openjdk-armhf/bin/javac"
