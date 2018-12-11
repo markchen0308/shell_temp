@@ -100,10 +100,10 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D WITH_V4L=ON \
       -D WITH_QT=ON \
       -D WITH_OPENCL=ON \
-      -D OPENCV_EXTRA_MODULES_PATH=~//install/opencv_contrib-3.4.1/modules \
-      -D PYTHON_LIBRARY=/usr/lib/arm-linux-gnueabihf/libpython3.5m.so.1 \
-      -D PYTHON_DEFAULT_EXECUTABLE=/usr/bin/python3.5m \
-      -D PYTHON_INCLUDE_DIRS=/usr/include/python3.5m \
+      -D OPENCV_EXTRA_MODULES_PATH=~/install/opencv_contrib-3.4.1/modules \
+      -D PYTHON_LIBRARY=/usr/lib/python3.5 \
+      -D PYTHON_DEFAULT_EXECUTABLE=/usr/bin/python3 \
+      -D PYTHON_INCLUDE_DIRS=/usr/include \
       -D BUILD_EXAMPLES=ON ..
 
 sudo make install

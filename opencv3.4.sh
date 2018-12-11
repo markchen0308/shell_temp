@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sudo apt-get install -y build-essential checkinstall yasm
-sudo apt-get install -y cmake git libgtk3.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
-sudo apt-get install -y python-dev python-numpy libtbb2 libtbb-dev libjpeg8-dev libpng16-dev libtiff5-dev libjasper-dev 
+sudo apt-get install -y cmake git  pkg-config libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
+sudo apt-get install -y  libtbb2 libtbb-dev libpng-dev libtiff5-dev  
 sudo apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 sudo apt-get install -y libxvidcore-dev libx264-dev
 sudo apt-get install -y libgtk-3-dev qt5-default 
