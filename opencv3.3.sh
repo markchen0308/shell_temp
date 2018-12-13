@@ -109,3 +109,28 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 sudo make install
 ln -s /usr/local/python/cv2/python-3.5/cv2.cpython-35m-arm-linux-gnueabihf.so /home/pi/.local/lib/python3.5/site-packages/cv2.so
 sudo ldconfig
+
+
+#x64 ubuntu18.04
+
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D INSTALL_C_EXAMPLES=ON \
+      -D INSTALL_PYTHON_EXAMPLES=ON \
+      -D WITH_TBB=ON \
+      -D WITH_V4L=ON \
+      -D WITH_QT=ON \
+      -D WITH_OPENGL=ON \
+      -D CUDA_NVCC_FLAGS=--expt-relaxed-constexpr \
+      -D OPENCV_EXTRA_MODULES_PATH=~/Download/opencv_contrib-3.4.1/modules \
+      -D PYTHON_LIBRARY=/usr/lib/python3.6 \
+      -D PYTHON_DEFAULT_EXECUTABLE=/usr/bin/python3 \
+      -D PYTHON_INCLUDE_DIRS=/usr/include \
+      -D BUILD_EXAMPLES=ON ..
+
+make -j6
+sudo make install
+sudo ldconfig
+pkg-config --modversion opencv
+
+
