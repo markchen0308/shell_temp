@@ -3,7 +3,7 @@ sudo apt-get install -y cmake git libgtk2.0-dev pkg-config libavcodec-dev libavf
 sudo apt-get install -y python-dev python-numpy libtbb2 libtbb-dev libjpeg8-dev libpng16-dev libtiff5-dev libjasper-dev 
 sudo apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 sudo apt-get install -y libxvidcore-dev libx264-dev
-sudo apt-get install -y  qt5-default 
+sudo apt-get install -y qtbase5-dev
 sudo apt-get install -y libatlas-base-dev gfortran
 sudo apt-get install -y libfaac-dev libmp3lame-dev libtheora-dev
 sudo apt-get install -y libvorbis-dev libopencore-amrnb-dev libopencore-amrwb-dev
